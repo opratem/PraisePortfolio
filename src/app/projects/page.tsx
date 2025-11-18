@@ -95,7 +95,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
   return (
     <div
       ref={ref}
-      className="project-card flex flex-col h-full p-4 md:p-7 rounded-2xl transition-all duration-300 cursor-default border border-transparent hover:border-[var(--accent-glow)]"
+      className="scroll-reveal project-card flex flex-col h-full p-4 md:p-7 rounded-2xl transition-all duration-300 cursor-default border border-transparent hover:border-[var(--accent-glow)]"
       style={{
         background: 'var(--bg-secondary)',
         boxShadow: 'var(--card-shadow)',

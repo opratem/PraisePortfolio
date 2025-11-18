@@ -1,20 +1,35 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, RefObject } from "react";
 
-export function useScrollReveal() {
-  const ref = useRef<HTMLDivElement>(null);
+export interface ScrollRevealOptions {
+  threshold?: number;
+  delay?: number;
+  rootMargin?: string;
+}
+
+export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(
+  options: ScrollRevealOptions = {}
+) {
+  const { threshold = 0.1, delay = 0, rootMargin = "0px" } = options;
+  const ref = useRef<T>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
+            if (delay > 0) {
+              setTimeout(() => {
+                entry.target.classList.add("visible");
+              }, delay);
+            } else {
+              entry.target.classList.add("visible");
+            }
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold, rootMargin }
     );
 
     const element = ref.current;
@@ -27,7 +42,7 @@ export function useScrollReveal() {
         observer.unobserve(element);
       }
     };
-  }, []);
+  }, [threshold, delay, rootMargin]);
 
   return ref;
 }

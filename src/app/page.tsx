@@ -128,7 +128,7 @@ export default function Home() {
           <div className="flex gap-4 flex-wrap justify-center items-center">
             <Link
               href="/projects"
-              className="mt-0.5 text-base md:text-lg font-bold border-none rounded-lg px-6 md:px-9 py-3 md:py-3.5 tracking-[0.05em] no-underline transition-all duration-[180ms] inline-block relative"
+              className="ripple mt-0.5 text-base md:text-lg font-bold border-none rounded-lg px-6 md:px-9 py-3 md:py-3.5 tracking-[0.05em] no-underline transition-all duration-[180ms] inline-block relative"
               style={{
                 background: 'var(--accent)',
                 color: '#fff',
@@ -153,7 +153,7 @@ export default function Home() {
               href="https://drive.google.com/file/d/1V6WJVc7FphFKRWMn2FY5EqC1OgFPZIXc/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-0.5 text-base md:text-lg font-bold rounded-lg px-6 md:px-9 py-3 md:py-3.5 tracking-[0.05em] no-underline transition-all duration-[180ms] inline-flex items-center justify-center gap-2"
+              className="ripple mt-0.5 text-base md:text-lg font-bold rounded-lg px-6 md:px-9 py-3 md:py-3.5 tracking-[0.05em] no-underline transition-all duration-[180ms] inline-flex items-center justify-center gap-2"
               style={{
                 background: 'transparent',
                 color: 'var(--text-primary)',

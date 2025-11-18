@@ -17,7 +17,7 @@ export function Navbar() {
       const initialTheme = savedTheme || "dark";
       setTheme(initialTheme);
       document.documentElement.setAttribute("data-theme", initialTheme);
-    } catch (error) {
+    } catch {
       // Fallback to dark theme if localStorage is not available (e.g., in iframe)
       setTheme("dark");
       document.documentElement.setAttribute("data-theme", "dark");
@@ -39,7 +39,7 @@ export function Navbar() {
     setTheme(newTheme);
     try {
       localStorage.setItem("theme", newTheme);
-    } catch (error) {
+    } catch {
       // Ignore localStorage error
     }
     document.documentElement.setAttribute("data-theme", newTheme);

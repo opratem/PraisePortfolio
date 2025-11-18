@@ -1,7 +1,6 @@
 "use client";
 
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import { Metadata } from "next";
 
 const projects = [
   {

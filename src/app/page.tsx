@@ -291,7 +291,7 @@ export default function Home() {
             I am a Certified Computer Engineer and Backend Developer with expertise in Java, Spring Boot, SQL, and Web Technologies. I specialize in designing and developing secure, scalable backend systems and RESTful APIs. With a strong foundation in computer programming, networking, and software development, I also bring frontend experience using React, HTML, CSS, and JavaScript to build responsive, user-friendly web interfaces.
           </p>
           <p className="text-base md:text-lg leading-relaxed tracking-[0.01rem] mt-4" style={{ color: 'var(--text-secondary)' }}>
-            Currently serving as a Coding Mentor at Learn2earn (Piscine Program) and Robotics Engineer/Instructor at Tech Talent Academy, I'm passionate about creating clean, maintainable code and contributing to impactful software solutions through collaboration, problem-solving, and continuous learning.
+            Currently serving as a Coding Mentor at Learn2earn (Piscine Program) and Robotics Engineer/Instructor at Tech Talent Academy, I&apos;m passionate about creating clean, maintainable code and contributing to impactful software solutions through collaboration, problem-solving, and continuous learning.
           </p>
         </div>
       </section>

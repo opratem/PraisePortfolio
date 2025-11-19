@@ -2,6 +2,7 @@
 
 import type { Metadata } from "next";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { PageTransition } from "@/components/page-transition";
 
 const contactLinks = [
   {
@@ -34,6 +35,7 @@ export default function ContactPage() {
   const sectionRef = useScrollReveal({ threshold: 0.2 });
 
   return (
+    <PageTransition>
     <main
       className="min-h-screen flex flex-col justify-center items-center px-4 transition-all duration-300"
       style={{
@@ -54,14 +56,14 @@ export default function ContactPage() {
           className="text-2xl md:text-4xl font-bold tracking-[1px] mb-2"
           style={{ color: "var(--accent-light)" }}
         >
-          Get in Touch
+          Let&apos;s Connect
         </h1>
 
         <p
           className="text-base md:text-lg mb-10 tracking-[0.01rem]"
           style={{ color: "var(--text-secondary)" }}
         >
-          You can connect with me via any platform below:
+          Have a project in mind or just want to chat about tech? I&apos;d love to hear from you!
         </p>
 
         <div className="flex flex-wrap justify-center gap-5 md:gap-9">
@@ -92,5 +94,6 @@ export default function ContactPage() {
         </div>
       </section>
     </main>
+    </PageTransition>
   );
 }

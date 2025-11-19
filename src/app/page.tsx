@@ -99,7 +99,7 @@ export default function Home() {
               textShadow: '0 2px 8px rgba(0, 0, 0, 0.5), 0 4px 16px rgba(0, 0, 0, 0.3)',
             }}
           >
-            Certified Computer Engineer with expertise in building secure, scalable backend systems and full-stack applications. Currently Coding Mentor at Learn2earn and Robotics Engineer at Tech Talent Academy.
+            I build robust, scalable backend systems that power real-world applications. As a Coding Mentor at Learn2earn and Robotics Engineer at Tech Talent Academy, I&apos;m passionate about crafting elegant solutions and empowering others through technology.
           </p>
 
           {/* Tech Icons */}
@@ -194,7 +194,7 @@ export default function Home() {
               Technologies & Tools
             </h2>
             <p className="text-base md:text-lg max-w-[600px] mx-auto leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-              Explore the technologies and tools I use to craft exceptional digital experiences
+              These are the tools I leverage daily to transform ideas into robust, scalable solutions
             </p>
           </div>
 
@@ -288,10 +288,10 @@ export default function Home() {
             About Me
           </h2>
           <p className="text-base md:text-lg leading-relaxed tracking-[0.01rem]" style={{ color: 'var(--text-secondary)' }}>
-            I am a Certified Computer Engineer and Backend Developer with expertise in Java, Spring Boot, SQL, and Web Technologies. I specialize in designing and developing secure, scalable backend systems and RESTful APIs. With a strong foundation in computer programming, networking, and software development, I also bring frontend experience using React, HTML, CSS, and JavaScript to build responsive, user-friendly web interfaces.
+            My journey in tech is driven by a simple belief: great software should be both powerful and elegant. As a Certified Computer Engineer, I specialize in architecting secure, scalable backend systems using Java, Spring Boot, and modern web technologies. Every line of code I write is an opportunity to solve real problems and create meaningful impact.
           </p>
           <p className="text-base md:text-lg leading-relaxed tracking-[0.01rem] mt-4" style={{ color: 'var(--text-secondary)' }}>
-            Currently serving as a Coding Mentor at Learn2earn (Piscine Program) and Robotics Engineer/Instructor at Tech Talent Academy, I&apos;m passionate about creating clean, maintainable code and contributing to impactful software solutions through collaboration, problem-solving, and continuous learning.
+            Beyond building applications, I find fulfillment in mentoring aspiring developers at Learn2earn and teaching robotics at Tech Talent Academy. There&apos;s something special about watching students transform from curious beginners into confident problem-solvers. When I&apos;m not coding or teaching, you&apos;ll find me exploring the latest in backend architecture, experimenting with new frameworks, or tinkering with robotics projects.
           </p>
         </div>
       </section>

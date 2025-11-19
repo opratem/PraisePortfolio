@@ -1,6 +1,7 @@
 "use client";
 
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { PageTransition } from "@/components/page-transition";
 
 const projects = [
   {
@@ -153,10 +154,16 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
 
 export default function ProjectsPage() {
   return (
+    <PageTransition>
     <main className="text-center px-4 pt-32 pb-16 transition-all duration-300" style={{ background: 'var(--bg-primary)' }}>
-      <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-[0.05em]" style={{ color: 'var(--accent-light)' }}>
-        Projects
-      </h2>
+      <div className="mb-12 max-w-3xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-[0.05em]" style={{ color: 'var(--accent-light)' }}>
+          My Work
+        </h2>
+        <p className="text-base md:text-lg leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+          Each project is a story of problem-solving, learning, and growth. From climate action to enterprise solutions, here&apos;s what I&apos;ve been building.
+        </p>
+      </div>
 
       <div className="grid gap-6 md:gap-8 px-2 md:px-8 max-w-[1400px] mx-auto" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
         {projects.map((project, index) => (
@@ -164,5 +171,6 @@ export default function ProjectsPage() {
         ))}
       </div>
     </main>
+    </PageTransition>
   );
 }

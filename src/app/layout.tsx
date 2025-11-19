@@ -4,6 +4,8 @@ import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { LoadingScreen } from "@/components/loading-screen";
+import { ScrollToTop } from "@/components/scroll-to-top";
+import { ScrollProgress } from "@/components/scroll-progress";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -43,9 +45,11 @@ export default function RootLayout({
     <html lang="en" className="dark" suppressHydrationWarning>
       <body className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}>
         <LoadingScreen />
+        <ScrollProgress />
         <Navbar />
         {children}
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );

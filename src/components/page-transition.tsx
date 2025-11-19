@@ -9,17 +9,21 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setIsVisible(false);
+
+    // Scroll to top on page change
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 50);
+    }, 100);
 
     return () => clearTimeout(timer);
   }, [pathname]);
 
   return (
     <div
-      className={`transition-opacity duration-500 ${
-        isVisible ? "opacity-100" : "opacity-0"
+      className={`page-transition transition-all duration-500 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       }`}
     >
       {children}

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import { Logo } from "./logo";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -66,10 +67,12 @@ export function Navbar() {
         {/* Brand */}
         <Link
           href="/"
-          className="text-[1.3rem] font-bold tracking-[0.6px] transition-colors duration-200"
-          style={{ color: 'var(--text-primary)' }}
+          className="flex items-center gap-3 transition-opacity duration-200 hover:opacity-80"
         >
-          Praise Temiloluwa Olufemi
+          <Logo variant="default" />
+          <span className="hidden md:block text-[1.1rem] font-bold tracking-[0.6px]" style={{ color: 'var(--text-primary)' }}>
+            Praise T. Olufemi
+          </span>
         </Link>
 
         {/* Desktop Navigation */}

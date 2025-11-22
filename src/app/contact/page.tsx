@@ -200,7 +200,7 @@ export default function ContactPage() {
                     type="text"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="John Doe"
+                    placeholder=""
                     className={errors.name ? "border-red-500" : ""}
                   />
                   {errors.name && (
@@ -222,7 +222,7 @@ export default function ContactPage() {
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="john@example.com"
+                    placeholder=""
                     className={errors.email ? "border-red-500" : ""}
                   />
                   {errors.email && (
@@ -244,7 +244,7 @@ export default function ContactPage() {
                     type="text"
                     value={formData.subject}
                     onChange={handleChange}
-                    placeholder="Project Collaboration"
+                    placeholder=""
                     className={errors.subject ? "border-red-500" : ""}
                   />
                   {errors.subject && (

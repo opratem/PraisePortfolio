@@ -110,10 +110,10 @@ export default function AboutPage() {
   ];
 
   const stats = [
-    { label: "Years of Experience", value: "7+", icon: <Calendar className="w-6 h-6" /> },
-    { label: "Projects Completed", value: "25+", icon: <Rocket className="w-6 h-6" /> },
-    { label: "Students Mentored", value: "150+", icon: <Users className="w-6 h-6" /> },
-    { label: "Current Positions", value: "3", icon: <Code className="w-6 h-6" /> }
+    { label: "Years of Experience", value: "4+", icon: <Calendar className="w-6 h-6" /> },
+    { label: "Projects Completed", value: "10+", icon: <Rocket className="w-6 h-6" /> },
+    { label: "Students Mentored", value: "50+", icon: <Users className="w-6 h-6" /> },
+    { label: "Current Positions", value: "2", icon: <Code className="w-6 h-6" /> }
   ];
 
   const passions = [
@@ -185,7 +185,7 @@ export default function AboutPage() {
                   >
                     <MapPin className="w-5 h-5 mb-2" style={{ color: 'var(--accent)' }} />
                     <p className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>Location</p>
-                    <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>Yaba, Lagos</p>
+                    <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>Lagos, Nigeria</p>
                   </div>
                   <div
                     className="p-4 rounded-xl"
@@ -216,7 +216,7 @@ export default function AboutPage() {
                   </p>
 
                   <p>
-                    Beyond traditional software development, I&apos;m pioneering in <strong style={{ color: 'var(--accent)' }}>robotics and IoT</strong>. At Tech Talent Academy, I design and program robotics projects using Arduino and ESP32 microcontrollers, creating everything from gesture-controlled robots to IoT-enabled prototypes with wireless communication.
+                    Beyond traditional software development, I&apos;m pioneering in <strong style={{ color: 'var(--accent)' }}>Robotics and IoT</strong>. At Tech Talent Academy, I design and program robotics projects using Arduino and ESP32 microcontrollers, creating everything from gesture-controlled robots to IoT-enabled prototypes with wireless communication.
                   </p>
 
                   <p>
@@ -288,7 +288,7 @@ export default function AboutPage() {
                   color: 'var(--accent)'
                 }}>
                   <p className="text-sm font-medium">
-                    Video coming soon! Add your recorded or AI-generated intro video here
+                    Video coming soon!
                   </p>
                 </div>
               </div>

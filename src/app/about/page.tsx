@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { PageTransition } from "@/components/page-transition";
 import {
@@ -167,10 +168,12 @@ export default function AboutPage() {
                     aspectRatio: '1/1'
                   }}
                 >
-                  <img
+                  <Image
                     src="/praise-professional.jpg"
                     alt="Praise Temiloluwa Olufemi - Professional Photo"
                     className="w-full h-full object-cover"
+                    width={500}
+                    height={500}
                   />
                 </div>
 
@@ -436,7 +439,7 @@ export default function AboutPage() {
         <section className="py-12 px-4" style={{ background: 'var(--bg-secondary)' }}>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: 'var(--text-primary)' }}>
-              Let's Build Something Amazing Together
+              Let&apos;s Build Something Amazing Together
             </h2>
             <p className="text-lg mb-8" style={{ color: 'var(--text-secondary)' }}>
               Whether you have a project in mind or just want to connect, I&apos;d love to hear from you

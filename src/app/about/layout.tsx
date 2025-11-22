@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     title: "About Praise Olufemi - Professional Background & Experience",
     description: "Certified Computer Engineer with expertise in Backend Development, Robotics, and Mentorship. Currently working at FlexiSAF Edusoft, Learn2earn, and Tech Talent Academy.",
     images: ["/praise-professional.jpg"],
-    url: "https://praiseportfolio.com/about",
+    url: "https://praisetemiloluwaolufemi.vercel.app/about",
   },
   twitter: {
     card: "summary_large_image",
@@ -28,7 +28,7 @@ export default function AboutLayout({
     "@type": "ProfilePage",
     "mainEntity": {
       "@type": "Person",
-      "@id": "https://praiseportfolio.com/#person"
+      "@id": "https://praisetemiloluwaolufemi.vercel.app/#person"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -37,13 +37,13 @@ export default function AboutLayout({
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://praiseportfolio.com"
+          "item": "https://praisetemiloluwaolufemi.vercel.app"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "About",
-          "item": "https://praiseportfolio.com/about"
+          "item": "https://praisetemiloluwaolufemi.vercel.app/about"
         }
       ]
     }

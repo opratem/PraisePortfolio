@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     "PostgreSQL",
     "IoT Developer"
   ],
-  authors: [{ name: "Praise Temiloluwa Olufemi", url: "https://praiseportfolio.com" }],
+  authors: [{ name: "Praise Temiloluwa Olufemi", url: "https://praisetemiloluwaolufemi.vercel.app" }],
   creator: "Praise Temiloluwa Olufemi",
   publisher: "Praise Temiloluwa Olufemi",
   formatDetection: {
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://praiseportfolio.com",
+    url: "https://praisetemiloluwaolufemi.vercel.app",
     siteName: "Praise Olufemi Portfolio",
     title: "Praise Temiloluwa Olufemi - Backend Developer & Computer Engineer",
     description: "Certified Computer Engineer and Backend Developer specializing in building secure, scalable systems with Java, Spring Boot, Python, and modern web technologies.",
@@ -111,22 +111,22 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Praise Olufemi Portfolio",
-    "url": "https://praiseportfolio.com",
+    "url": "https://praisetemiloluwaolufemi.vercel.app",
     "description": "Professional portfolio of Praise Temiloluwa Olufemi, Backend Developer and Computer Engineer",
     "author": {
       "@type": "Person",
-      "@id": "https://praiseportfolio.com/#person"
+      "@id": "https://praisetemiloluwaolufemi.vercel.app/#person"
     }
   };
 
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "https://praiseportfolio.com/#person",
+    "@id": "https://praisetemiloluwaolufemi.vercel.app/#person",
     "name": "Praise Temiloluwa Olufemi",
     "alternateName": "Praise Olufemi",
-    "url": "https://praiseportfolio.com",
-    "image": "https://praiseportfolio.com/praise-professional.jpg",
+    "url": "https://praisetemiloluwaolufemi.vercel.app",
+    "image": "https://praisetemiloluwaolufemi.vercel.app/praise-professional.jpg",
     "jobTitle": "Backend Developer",
     "worksFor": [
       {

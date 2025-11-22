@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     title: "Projects Portfolio - Praise Olufemi",
     description: "Full-stack and backend development projects showcasing expertise in Java, Spring Boot, Python, Django, React, and Next.js. From climate action to enterprise solutions.",
     images: ["/praise-professional.jpg"],
-    url: "https://praiseportfolio.com/projects",
+    url: "https://praisetemiloluwaolufemi.vercel.app/projects",
   },
   twitter: {
     card: "summary_large_image",
@@ -28,7 +28,7 @@ export default function ProjectsLayout({
     "@type": "CollectionPage",
     "name": "Projects Portfolio",
     "description": "A collection of full-stack and backend development projects by Praise Temiloluwa Olufemi",
-    "url": "https://praiseportfolio.com/projects",
+    "url": "https://praisetemiloluwaolufemi.vercel.app/projects",
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
@@ -36,13 +36,13 @@ export default function ProjectsLayout({
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://praiseportfolio.com"
+          "item": "https://praisetemiloluwaolufemi.vercel.app"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Projects",
-          "item": "https://praiseportfolio.com/projects"
+          "item": "https://praisetemiloluwaolufemi.vercel.app/projects"
         }
       ]
     },
@@ -56,7 +56,7 @@ export default function ProjectsLayout({
           "url": "https://github.com/Favoritetechgirl/WastelessApp-BE",
           "creator": {
             "@type": "Person",
-            "@id": "https://praiseportfolio.com/#person"
+            "@id": "https://praisetemiloluwaolufemi.vercel.app/#person"
           },
           "keywords": "Spring Boot, Java, React, PostgreSQL, Climate Action"
         },
@@ -67,7 +67,7 @@ export default function ProjectsLayout({
           "url": "https://cvbuildercv.vercel.app/",
           "creator": {
             "@type": "Person",
-            "@id": "https://praiseportfolio.com/#person"
+            "@id": "https://praisetemiloluwaolufemi.vercel.app/#person"
           },
           "keywords": "React, TypeScript, Tailwind CSS, Supabase"
         },
@@ -78,7 +78,7 @@ export default function ProjectsLayout({
           "url": "https://tpwbm.vercel.app",
           "creator": {
             "@type": "Person",
-            "@id": "https://praiseportfolio.com/#person"
+            "@id": "https://praisetemiloluwaolufemi.vercel.app/#person"
           },
           "keywords": "Next.js, TypeScript, React, Tailwind CSS, PostgreSQL"
         }

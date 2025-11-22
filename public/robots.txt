@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://praiseportfolio.com/sitemap.xml
+Sitemap: https://praisetemiloluwaolufemi.vercel.app/sitemap.xml
 
 # Crawl-delay (optional, adjust as needed)
 Crawl-delay: 1

@@ -1,12 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { Download } from "lucide-react";
+import { SkillsSection } from "@/components/skills-section";
 
 export default function Home() {
-  const skillsRef = useScrollReveal();
-  const aboutRef = useScrollReveal();
 
   const techIcons = [
     { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", alt: "Python", title: "Python" },
@@ -184,117 +182,7 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section className="py-10 md:py-20 px-4 transition-all duration-300" style={{ background: 'var(--bg-primary)' }}>
-        <div className="max-w-[1200px] mx-auto">
-          <div ref={skillsRef} className="scroll-reveal text-center mb-8 md:mb-16">
-            <span className="inline-block text-[0.85rem] font-semibold tracking-[2px] uppercase mb-2" style={{ color: 'var(--accent)' }}>
-              MY TOOLBOX
-            </span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-3" style={{ color: 'var(--text-primary)' }}>
-              Technologies & Tools
-            </h2>
-            <p className="text-base md:text-lg max-w-[600px] mx-auto leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-              These are the tools I leverage daily to transform ideas into robust, scalable solutions
-            </p>
-          </div>
-
-          <div ref={skillsRef} className="scroll-reveal grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 px-2 md:px-4">
-            {[
-              {
-                title: "Languages",
-                skills: ["Java", "Python", "JavaScript", "TypeScript", "Golang", "HTML", "CSS"],
-              },
-              {
-                title: "Frameworks & Libraries",
-                skills: ["Spring Boot", "React", "Next.js", "Django", "Express", "Tailwind CSS"],
-              },
-              {
-                title: "Databases & Tools",
-                skills: ["PostgreSQL", "NeonDB", "Supabase", "Docker", "Git", "Linux"],
-              },
-              {
-                title: "Specializations",
-                skills: ["RESTful APIs", "Full-Stack Development", "Robotics Engineering", "Arduino & ESP32", "Problem Solving"],
-              },
-            ].map((category) => (
-              <div
-                key={category.title}
-                className="p-6 md:p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1"
-                style={{
-                  background: 'var(--bg-secondary)',
-                  boxShadow: 'var(--card-shadow)',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = '0 8px 30px rgba(250, 136, 27, 0.15)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = 'var(--card-shadow)';
-                }}
-              >
-                <h3
-                  className="text-xl font-semibold mb-4 pb-3"
-                  style={{
-                    color: 'var(--accent-light)',
-                    borderBottom: '2px solid var(--bg-tertiary)',
-                  }}
-                >
-                  {category.title}
-                </h3>
-                <div className="flex flex-wrap gap-2.5">
-                  {category.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="inline-block px-4 py-2 rounded-lg text-[0.9rem] font-medium transition-all duration-200 border border-transparent"
-                      style={{
-                        background: 'var(--bg-tertiary)',
-                        color: 'var(--text-secondary)',
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.background = 'var(--accent)';
-                        e.currentTarget.style.color = '#fff';
-                        e.currentTarget.style.borderColor = 'var(--accent-hover)';
-                        e.currentTarget.style.transform = 'translateY(-2px)';
-                        e.currentTarget.style.boxShadow = '0 4px 12px rgba(250, 136, 27, 0.2)';
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.background = 'var(--bg-tertiary)';
-                        e.currentTarget.style.color = 'var(--text-secondary)';
-                        e.currentTarget.style.borderColor = 'transparent';
-                        e.currentTarget.style.transform = 'none';
-                        e.currentTarget.style.boxShadow = 'none';
-                      }}
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section className="py-8 md:py-12 transition-all duration-300" style={{ background: 'linear-gradient(180deg, var(--bg-tertiary) 70%, var(--bg-secondary) 100%)' }}>
-        <div
-          ref={aboutRef}
-          className="scroll-reveal max-w-[870px] mx-auto p-6 md:p-8 rounded-2xl text-center transition-all duration-300"
-          style={{
-            background: 'var(--bg-secondary)',
-            boxShadow: '0 6px 28px rgba(18,25,44,0.18)',
-          }}
-        >
-          <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6" style={{ color: 'var(--accent-light)' }}>
-            About Me
-          </h2>
-          <p className="text-base md:text-lg leading-relaxed tracking-[0.01rem]" style={{ color: 'var(--text-secondary)' }}>
-            My journey in tech is driven by a simple belief: great software should be both powerful and elegant. As a Certified Computer Engineer, I specialize in architecting secure, scalable backend systems using Java, Spring Boot, and modern web technologies. Every line of code I write is an opportunity to solve real problems and create meaningful impact.
-          </p>
-          <p className="text-base md:text-lg leading-relaxed tracking-[0.01rem] mt-4" style={{ color: 'var(--text-secondary)' }}>
-            Beyond building applications, I find fulfillment in mentoring aspiring developers at Learn2earn and teaching robotics at Tech Talent Academy. There&apos;s something special about watching students transform from curious beginners into confident problem-solvers. When I&apos;m not coding or teaching, you&apos;ll find me exploring the latest in backend architecture, experimenting with new frameworks, or tinkering with robotics projects.
-          </p>
-        </div>
-      </section>
+      <SkillsSection />
     </main>
   );
 }

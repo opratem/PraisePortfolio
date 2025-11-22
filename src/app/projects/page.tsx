@@ -246,9 +246,9 @@ function ProjectCard({ project, index, onViewDetails }: { project: Project; inde
         ))}
       </div>
 
-      <h3 className="text-base md:text-lg font-bold mb-2 group-hover:underline" style={{ color: 'var(--accent-light)' }}>
+      <h2 className="text-base md:text-lg font-bold mb-2 group-hover:underline" style={{ color: 'var(--accent-light)' }}>
         {project.title}
-      </h3>
+      </h2>
 
       <div className="flex items-center gap-2 mb-3">
         <Badge
@@ -371,9 +371,9 @@ export default function ProjectsPage() {
     <PageTransition>
     <main className="text-center px-4 pt-32 pb-16 transition-all duration-300" style={{ background: 'var(--bg-primary)' }}>
       <div className="mb-12 max-w-3xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-[0.05em]" style={{ color: 'var(--accent-light)' }}>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-[0.05em]" style={{ color: 'var(--accent-light)' }}>
           My Work
-        </h2>
+        </h1>
         <p className="text-base md:text-lg leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
           Each project is a story of problem-solving, learning, and growth. From climate action to enterprise solutions, here&apos;s what I&apos;ve been building.
         </p>

@@ -83,9 +83,7 @@ export function SkillsSection() {
   };
 
   const getProgressColor = (level: number) => {
-    if (level >= 85) return "var(--accent)";
-    if (level >= 70) return "#3b82f6";
-    return "#8b5cf6";
+    return "#3b82f6"; // Blue for all skill levels
   };
 
   return (
@@ -118,8 +116,15 @@ export function SkillsSection() {
                           {skill.name}
                         </span>
                       </div>
-                      <div className="h-2 rounded-full overflow-hidden" style={{ background: 'var(--bg-tertiary)' }}>
-                        <div className="h-full rounded-full transition-all duration-500 group-hover:scale-x-105 origin-left" style={{ width: `${skill.level}%`, background: `linear-gradient(90deg, ${getProgressColor(skill.level)}, ${getProgressColor(skill.level)}dd)`, boxShadow: `0 0 8px ${getProgressColor(skill.level)}50` }} />
+                      <div className="h-2.5 rounded-full overflow-hidden relative" style={{ background: 'rgba(255, 255, 255, 0.05)' }}>
+                        <div
+                          className="h-full rounded-full transition-all duration-500 group-hover:scale-x-105 origin-left absolute top-0 left-0"
+                          style={{
+                            width: `${skill.level}%`,
+                            background: `linear-gradient(90deg, ${getProgressColor(skill.level)}, ${getProgressColor(skill.level)}ee)`,
+                            boxShadow: `0 0 10px ${getProgressColor(skill.level)}60`
+                          }}
+                        />
                       </div>
                     </div>
                   ))}

@@ -50,24 +50,22 @@ export default function Home() {
             animation: 'fadeInUp 1.5s cubic-bezier(0.19, 1, 0.22, 1) 0.3s both',
           }}
         >
-          {/* Availability Badge */}
+          {/* Available Badge */}
           <div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-[20px] text-[0.9rem] font-medium mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 md:mb-8 backdrop-blur-sm border transition-all duration-300 hover:scale-105"
             style={{
-              background: 'rgba(34, 197, 94, 0.1)',
-              border: '1px solid rgba(34, 197, 94, 0.3)',
-              color: '#22c55e',
-              animation: 'fadeInUp 1.5s 0.2s both',
+              background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(5, 150, 105, 0.1))',
+              border: '1.5px solid rgba(16, 185, 129, 0.4)',
+              color: '#10b981',
+              boxShadow: '0 4px 20px rgba(16, 185, 129, 0.2), 0 0 30px rgba(16, 185, 129, 0.1)',
+              animation: 'fadeInUp 1.5s 0.22s both',
             }}
           >
-            <span
-              className="w-2 h-2 rounded-full"
-              style={{
-                background: '#22c55e',
-                animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              }}
-            ></span>
-            Available for new projects
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+            </span>
+            <span className="text-sm md:text-base font-semibold tracking-wide">Available for new projects</span>
           </div>
 
           <h1
@@ -126,58 +124,75 @@ export default function Home() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex gap-4 flex-wrap justify-center items-center">
+          <div className="flex gap-4 md:gap-6 flex-wrap justify-center items-center">
             <Link
               href="/projects"
-              className="ripple mt-0.5 text-base md:text-lg font-bold border-none rounded-lg px-6 md:px-9 py-3 md:py-3.5 tracking-[0.05em] no-underline transition-all duration-[180ms] inline-block relative"
+              className="ripple text-sm md:text-base font-bold border-none rounded-xl px-6 md:px-8 py-2.5 md:py-3 tracking-[0.05em] no-underline transition-all duration-200 inline-block relative shadow-lg"
               style={{
-                background: 'var(--accent)',
+                background: 'linear-gradient(135deg, #f59e0b 0%, #f97316 100%)',
                 color: '#fff',
-                boxShadow: '0 3px 20px rgba(250,136,27,.11)',
+                boxShadow: '0 4px 15px rgba(245, 158, 11, 0.4)',
                 animation: 'fadeInUp 1.5s 0.48s both',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'var(--accent-hover)';
-                e.currentTarget.style.transform = 'translateY(-2px) scale(1.03)';
-                e.currentTarget.style.boxShadow = '0 8px 30px 0 rgba(250,136,27,.22)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)';
+                e.currentTarget.style.transform = 'translateY(-3px)';
+                e.currentTarget.style.boxShadow = '0 8px 25px rgba(245, 158, 11, 0.5)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'var(--accent)';
-                e.currentTarget.style.transform = 'none';
-                e.currentTarget.style.boxShadow = '0 3px 20px rgba(250,136,27,.11)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, #f59e0b 0%, #f97316 100%)';
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 15px rgba(245, 158, 11, 0.4)';
               }}
             >
               Explore My Work
             </Link>
 
-            <a
-              href="https://drive.google.com/file/d/1V6WJVc7FphFKRWMn2FY5EqC1OgFPZIXc/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ripple mt-0.5 text-base md:text-lg font-bold rounded-lg px-6 md:px-9 py-3 md:py-3.5 tracking-[0.05em] no-underline transition-all duration-[180ms] inline-flex items-center justify-center gap-2"
+            <Link
+              href="/about"
+              className="ripple text-sm md:text-base font-bold border-none rounded-xl px-6 md:px-8 py-2.5 md:py-3 tracking-[0.05em] no-underline transition-all duration-200 inline-block relative shadow-lg"
               style={{
-                background: 'transparent',
-                color: 'var(--text-primary)',
-                border: '2px solid var(--accent)',
-                boxShadow: '0 3px 20px rgba(250,136,27,.11)',
-                animation: 'fadeInUp 1.5s 0.48s both',
+                background: 'linear-gradient(135deg, #f59e0b 0%, #f97316 100%)',
+                color: '#fff',
+                boxShadow: '0 4px 15px rgba(245, 158, 11, 0.4)',
+                animation: 'fadeInUp 1.5s 0.52s both',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'var(--accent)';
-                e.currentTarget.style.color = '#fff';
-                e.currentTarget.style.borderColor = 'var(--accent-hover)';
-                e.currentTarget.style.transform = 'translateY(-2px) scale(1.03)';
-                e.currentTarget.style.boxShadow = '0 8px 30px 0 rgba(250,136,27,.22)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)';
+                e.currentTarget.style.transform = 'translateY(-3px)';
+                e.currentTarget.style.boxShadow = '0 8px 25px rgba(245, 158, 11, 0.5)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'transparent';
-                e.currentTarget.style.color = 'var(--text-primary)';
-                e.currentTarget.style.borderColor = 'var(--accent)';
-                e.currentTarget.style.transform = 'none';
-                e.currentTarget.style.boxShadow = '0 3px 20px rgba(250,136,27,.11)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, #f59e0b 0%, #f97316 100%)';
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 15px rgba(245, 158, 11, 0.4)';
               }}
             >
-              <Download className="w-[18px] h-[18px]" />
+              Learn More About Me
+            </Link>
+
+            <a
+              href="/resume.pdf"
+              download="Praise_Olufemi_Resume.pdf"
+              className="ripple text-sm md:text-base font-bold border-none rounded-xl px-6 md:px-8 py-2.5 md:py-3 tracking-[0.05em] no-underline transition-all duration-200 inline-flex items-center justify-center gap-2 relative shadow-lg"
+              style={{
+                background: 'linear-gradient(135deg, #f59e0b 0%, #f97316 100%)',
+                color: '#fff',
+                boxShadow: '0 4px 15px rgba(245, 158, 11, 0.4)',
+                animation: 'fadeInUp 1.5s 0.56s both',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)';
+                e.currentTarget.style.transform = 'translateY(-3px)';
+                e.currentTarget.style.boxShadow = '0 8px 25px rgba(245, 158, 11, 0.5)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'linear-gradient(135deg, #f59e0b 0%, #f97316 100%)';
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 15px rgba(245, 158, 11, 0.4)';
+              }}
+            >
+              <Download className="w-5 h-5" />
               Download Resume
             </a>
           </div>

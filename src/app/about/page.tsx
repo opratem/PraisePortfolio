@@ -81,6 +81,20 @@ export default function AboutPage() {
       ]
     },
     {
+      year: "Apr 2022 - Jan 2024",
+      title: "Computer Science Teacher",
+      organization: "Police Children School Ado-Ekiti",
+      description: "Taught Computer Science to Basic 3, 4, and 5 students, managing practical classes and assessments.",
+      icon: <Users className="w-5 h-5" />,
+      color: "#ec4899",
+      achievements: [
+        "Delivered comprehensive Computer Science curriculum",
+        "Managed computer lab sessions and practical exercises",
+        "Conducted student assessments and progress tracking",
+        "Developed engaging teaching materials for young learners"
+      ]
+    },
+    {
       year: "Sep 2015 - Sep 2021",
       title: "Computer Engineering Graduate",
       organization: "Federal University of Technology Akure",
@@ -91,19 +105,6 @@ export default function AboutPage() {
         "Certified Computer Engineer",
         "Specialized in Software Development and Networking",
         "Gained practical experience in full-stack development"
-      ]
-    },
-    {
-      year: "Apr 2022 - Jan 2024",
-      title: "Computer Science Teacher",
-      organization: "Police Children School Ado-Ekiti",
-      description: "Taught Computer Science to Basic 3, 4, and 5 students, managing practical classes and assessments.",
-      icon: <Users className="w-5 h-5" />,
-      color: "#ec4899",
-      achievements: [
-        "Developed practical computer science curriculum",
-        "Managed student assessments and grading",
-        "Continued service beyond NYSC completion"
       ]
     }
   ];
@@ -158,9 +159,9 @@ export default function AboutPage() {
         </div>
 
         {/* WHO I AM Section - First */}
-        <section className="py-16 px-4">
+        <section className="py-8 md:py-16 px-4">
           <div ref={bioRef} className="scroll-reveal max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
             <div className="order-2 md:order-1">
                 <div
                   className="relative rounded-2xl overflow-hidden shadow-2xl mb-6"
@@ -198,14 +199,14 @@ export default function AboutPage() {
               </div>
 
               <div className="order-1 md:order-2">
-                <span className="inline-block text-sm font-semibold tracking-wider uppercase mb-2" style={{ color: 'var(--accent)' }}>
+                <span className="inline-block text-xs md:text-sm font-semibold tracking-wider uppercase mb-2" style={{ color: 'var(--accent)' }}>
                   WHO I AM
                 </span>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: 'var(--text-primary)' }}>
+                <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6" style={{ color: 'var(--text-primary)' }}>
                   Praise Temiloluwa Olufemi
                 </h2>
 
-                <div className="space-y-4 text-lg leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                <div className="space-y-3 md:space-y-4 text-base md:text-lg leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                   <p>
                     I&apos;m a <strong style={{ color: 'var(--accent)' }}>Certified Computer Engineer</strong> with practical expertise in Computer Programming, Networking, Software Development, and Full-Stack Development. I build robust, scalable backend systems that power real-world applications.
                   </p>
@@ -227,7 +228,7 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 mt-8">
+                <div className="grid grid-cols-2 gap-4 mt-6 md:mt-8">
                   {stats.map((stat, index) => (
                     <div
                       key={index}

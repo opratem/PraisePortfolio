@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { PageTransition } from "@/components/page-transition";
 import {
@@ -19,7 +18,6 @@ import {
 } from "lucide-react";
 
 export default function AboutPage() {
-  const headerRef = useScrollReveal();
   const videoRef = useScrollReveal();
   const bioRef = useScrollReveal();
   const timelineRef = useScrollReveal();
@@ -110,10 +108,10 @@ export default function AboutPage() {
   ];
 
   const stats = [
-    { label: "Years of Experience", value: "4+", icon: <Calendar className="w-6 h-6" /> },
-    { label: "Projects Completed", value: "10+", icon: <Rocket className="w-6 h-6" /> },
+    { label: "Years of Experience", value: "7+", icon: <Calendar className="w-6 h-6" /> },
+    { label: "Projects Completed", value: "25+", icon: <Rocket className="w-6 h-6" /> },
     { label: "Students Mentored", value: "150+", icon: <Users className="w-6 h-6" /> },
-    { label: "Current Positions", value: "2", icon: <Code className="w-6 h-6" /> }
+    { label: "Current Positions", value: "3", icon: <Code className="w-6 h-6" /> }
   ];
 
   const passions = [
@@ -183,7 +181,7 @@ export default function AboutPage() {
                   >
                     <MapPin className="w-5 h-5 mb-2" style={{ color: 'var(--accent)' }} />
                     <p className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>Location</p>
-                    <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>Lagos, Nigeria</p>
+                    <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>Yaba, Lagos</p>
                   </div>
                   <div
                     className="p-4 rounded-xl"
@@ -206,7 +204,7 @@ export default function AboutPage() {
 
                 <div className="space-y-4 text-lg leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                   <p>
-                    I'm a <strong style={{ color: 'var(--accent)' }}>Certified Computer Engineer</strong> with practical expertise in Computer Programming, Networking, Software Development, and Full-Stack Development. I build robust, scalable backend systems that power real-world applications.
+                    I&apos;m a <strong style={{ color: 'var(--accent)' }}>Certified Computer Engineer</strong> with practical expertise in Computer Programming, Networking, Software Development, and Full-Stack Development. I build robust, scalable backend systems that power real-world applications.
                   </p>
 
                   <p>
@@ -214,15 +212,15 @@ export default function AboutPage() {
                   </p>
 
                   <p>
-                    Beyond traditional software development, I'm pioneering in <strong style={{ color: 'var(--accent)' }}>robotics and IoT</strong>. At Tech Talent Academy, I design and program robotics projects using Arduino and ESP32 microcontrollers, creating everything from gesture-controlled robots to IoT-enabled prototypes with wireless communication.
+                    Beyond traditional software development, I&apos;m pioneering in <strong style={{ color: 'var(--accent)' }}>robotics and IoT</strong>. At Tech Talent Academy, I design and program robotics projects using Arduino and ESP32 microcontrollers, creating everything from gesture-controlled robots to IoT-enabled prototypes with wireless communication.
                   </p>
 
                   <p>
-                    As a <strong style={{ color: 'var(--accent)' }}>Coding Mentor at Learn2earn</strong>, I guide aspiring developers through intensive bootcamps, conducting code reviews, and fostering growth-oriented learning environments. I'm passionate about empowering others to reach their full potential in technology.
+                    As a <strong style={{ color: 'var(--accent)' }}>Coding Mentor at Learn2earn</strong>, I guide aspiring developers through intensive bootcamps, conducting code reviews, and fostering growth-oriented learning environments. I&apos;m passionate about empowering others to reach their full potential in technology.
                   </p>
 
                   <p>
-                    When I'm not coding or teaching, you'll find me exploring cutting-edge technologies, contributing to open-source projects, or experimenting with new frameworks and architectures.
+                    When I&apos;m not coding or teaching, you&apos;ll find me exploring cutting-edge technologies, contributing to open-source projects, or experimenting with new frameworks and architectures.
                   </p>
                 </div>
 
@@ -286,7 +284,7 @@ export default function AboutPage() {
                   color: 'var(--accent)'
                 }}>
                   <p className="text-sm font-medium">
-                    Video coming soon!
+                    Video coming soon! Add your recorded or AI-generated intro video here
                   </p>
                 </div>
               </div>
@@ -305,7 +303,7 @@ export default function AboutPage() {
                 Career Timeline
               </h2>
               <p className="text-lg max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
-                From student to engineer to mentor — here's how my journey unfolded
+                From student to engineer to mentor — here&apos;s how my journey unfolded
               </p>
             </div>
 
@@ -441,7 +439,7 @@ export default function AboutPage() {
               Let's Build Something Amazing Together
             </h2>
             <p className="text-lg mb-8" style={{ color: 'var(--text-secondary)' }}>
-              Whether you have a project in mind or just want to connect, I'd love to hear from you
+              Whether you have a project in mind or just want to connect, I&apos;d love to hear from you
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <a

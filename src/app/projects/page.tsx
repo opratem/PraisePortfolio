@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { Search, ExternalLink, Github, Globe } from "lucide-react";
+import { Search, Github, Globe } from "lucide-react";
 
 type ProjectType = "Full-stack" | "Backend" | "Frontend" | "Mobile";
 

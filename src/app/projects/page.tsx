@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useMemo } from "react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { PageTransition } from "@/components/page-transition";
@@ -235,11 +236,13 @@ function ProjectCard({ project, index, onViewDetails }: { project: Project; inde
     >
       <div className="flex gap-3 mb-4 justify-center flex-wrap" aria-label={`Technologies used: ${project.icons.map(i => i.alt).join(', ')}`}>
         {project.icons.map((icon) => (
-          <img
+          <Image
             key={icon.alt}
             src={icon.src}
             alt={icon.alt}
             title={icon.title}
+            width={32}
+            height={32}
             className="w-8 h-8 transition-transform duration-[220ms] hover:scale-115"
             style={{ filter: 'drop-shadow(0 0 2px rgba(0,0,0,0.13))' }}
           />
@@ -533,10 +536,12 @@ export default function ProjectsPage() {
                   <div className="flex gap-3 flex-wrap">
                     {selectedProject.icons.map((icon) => (
                       <div key={icon.alt} className="flex items-center gap-2 px-3 py-2 rounded-lg" style={{ background: 'var(--bg-primary)' }}>
-                        <img
+                        <Image
                           src={icon.src}
                           alt={icon.alt}
                           title={icon.title}
+                          width={24}
+                          height={24}
                           className="w-6 h-6"
                         />
                         <span className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>

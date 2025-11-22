@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Download } from "lucide-react";
 import { SkillsSection } from "@/components/skills-section";
@@ -103,11 +104,13 @@ export default function Home() {
           {/* Tech Icons */}
           <div className="flex gap-4 md:gap-8 mb-6 md:mb-8 flex-wrap items-center justify-center">
             {techIcons.map((icon, index) => (
-              <img
+              <Image
                 key={icon.alt}
                 src={icon.src}
                 alt={icon.alt}
                 title={icon.title}
+                width={48}
+                height={48}
                 className="w-8 h-8 md:w-12 md:h-12 object-contain opacity-90 transition-all duration-[180ms] hover:scale-110 hover:opacity-100"
                 style={{
                   filter: 'drop-shadow(0 2px 12px rgba(28,32,50,.12))',

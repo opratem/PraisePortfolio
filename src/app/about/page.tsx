@@ -162,7 +162,7 @@ export default function AboutPage() {
         <section className="py-8 md:py-16 px-4">
           <div ref={bioRef} className="scroll-reveal max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
-            <div className="order-2 md:order-1">
+            <div className="order-1 md:order-1">
                 <div
                   className="relative rounded-2xl overflow-hidden shadow-2xl mb-6"
                   style={{
@@ -198,7 +198,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="order-1 md:order-2">
+              <div className="order-2 md:order-2">
                 <span className="inline-block text-xs md:text-sm font-semibold tracking-wider uppercase mb-2" style={{ color: 'var(--accent)' }}>
                   WHO I AM
                 </span>
@@ -439,7 +439,7 @@ export default function AboutPage() {
         {/* CTA Section */}
         <section className="py-12 px-4" style={{ background: 'var(--bg-secondary)' }}>
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: 'var(--text-primary)' }}>
+            <h2 className="text-2xl md:text-4xl font-bold mb-6" style={{ color: 'var(--text-primary)' }}>
               Let&apos;s Build Something Amazing Together
             </h2>
             <p className="text-lg mb-8" style={{ color: 'var(--text-secondary)' }}>

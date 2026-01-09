@@ -3,7 +3,7 @@
 import * as React from "react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 import { cn } from "@/lib/utils"
-import { Cross2Icon } from "@radix-ui/react-icons"
+import { X } from "lucide-react"
 
 const Dialog = DialogPrimitive.Root
 
@@ -20,7 +20,7 @@ const DialogOverlay = React.forwardRef<
   <DialogPrimitive.Overlay
     ref={ref}
     className={cn(
-      "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+      "fixed inset-0 z-[1010] bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
       className
     )}
     {...props}
@@ -37,16 +37,48 @@ const DialogContent = React.forwardRef<
     <DialogPrimitive.Content
       ref={ref}
       className={cn(
-        "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg",
+        // Base styles
+        "fixed z-[1011] bg-background shadow-lg duration-200",
+        // Animation
+        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+        // Mobile: Full screen with safe areas
+        "inset-0 flex flex-col",
+        "pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)]",
+        // Tablet and up: Centered modal with max dimensions
+        "sm:inset-auto sm:left-[50%] sm:top-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%]",
+        "sm:max-w-lg sm:w-[calc(100%-2rem)] sm:max-h-[85vh] sm:rounded-lg sm:border",
+        "sm:data-[state=closed]:zoom-out-95 sm:data-[state=open]:zoom-in-95",
+        "sm:data-[state=closed]:slide-out-to-left-1/2 sm:data-[state=closed]:slide-out-to-top-[48%]",
+        "sm:data-[state=open]:slide-in-from-left-1/2 sm:data-[state=open]:slide-in-from-top-[48%]",
         className
       )}
       {...props}
     >
-      {children}
-      <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
-        <Cross2Icon className="h-4 w-4" />
-        <span className="sr-only">Close</span>
-      </DialogPrimitive.Close>
+      {/* Sticky Close Button Header for Mobile */}
+      <div
+        className="sticky top-0 z-10 flex items-center justify-between p-3 bg-background border-b sm:absolute sm:right-3 sm:top-3 sm:p-0 sm:bg-transparent sm:border-0"
+        style={{ borderColor: 'var(--accent-glow)' }}
+      >
+        {/* Mobile title hint */}
+        <span className="text-sm font-medium sm:hidden" style={{ color: 'var(--text-secondary)' }}>
+          Details
+        </span>
+        <DialogPrimitive.Close
+          className="flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 transition-all focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 sm:w-8 sm:h-8 sm:rounded-md sm:bg-transparent sm:hover:bg-white/10"
+          style={{ color: 'var(--text-primary)' }}
+        >
+          <X className="h-5 w-5 sm:h-4 sm:w-4" />
+          <span className="sr-only">Close</span>
+        </DialogPrimitive.Close>
+      </div>
+
+      {/* Scrollable Content Area */}
+      <div
+        className="flex-1 overflow-y-auto overscroll-contain p-4 sm:p-6"
+        style={{ WebkitOverflowScrolling: 'touch' }}
+      >
+        {children}
+      </div>
     </DialogPrimitive.Content>
   </DialogPortal>
 ))

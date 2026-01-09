@@ -157,28 +157,28 @@ export function SkillsSection() {
       </section>
 
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="max-w-[500px]" style={{ background: 'var(--bg-secondary)', borderColor: 'var(--bg-tertiary)' }}>
+        <DialogContent className="sm:max-w-[500px]" style={{ background: 'var(--bg-secondary)', borderColor: 'var(--bg-tertiary)' }}>
           {selectedSkill && (
             <>
               <DialogHeader>
-                <DialogTitle className="text-2xl font-bold mb-4" style={{ color: 'var(--accent-light)' }}>
+                <DialogTitle className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4" style={{ color: 'var(--accent-light)' }}>
                   {selectedSkill.name}
                 </DialogTitle>
               </DialogHeader>
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 <div>
-                  <h4 className="text-sm font-semibold mb-2" style={{ color: 'var(--text-secondary)' }}>Experience</h4>
-                  <p className="text-base" style={{ color: 'var(--text-primary)' }}>{selectedSkill.yearsOfExperience}</p>
+                  <h4 className="text-xs sm:text-sm font-semibold mb-1.5 sm:mb-2" style={{ color: 'var(--text-secondary)' }}>Experience</h4>
+                  <p className="text-sm sm:text-base" style={{ color: 'var(--text-primary)' }}>{selectedSkill.yearsOfExperience}</p>
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold mb-2" style={{ color: 'var(--text-secondary)' }}>Description</h4>
-                  <p className="text-base leading-relaxed" style={{ color: 'var(--text-primary)' }}>{selectedSkill.description}</p>
+                  <h4 className="text-xs sm:text-sm font-semibold mb-1.5 sm:mb-2" style={{ color: 'var(--text-secondary)' }}>Description</h4>
+                  <p className="text-sm sm:text-base leading-relaxed" style={{ color: 'var(--text-primary)' }}>{selectedSkill.description}</p>
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold mb-2" style={{ color: 'var(--text-secondary)' }}>Notable Projects</h4>
-                  <div className="flex flex-wrap gap-2">
+                  <h4 className="text-xs sm:text-sm font-semibold mb-1.5 sm:mb-2" style={{ color: 'var(--text-secondary)' }}>Notable Projects</h4>
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
                     {selectedSkill.projects.map((project) => (
-                      <Badge key={project} className="px-3 py-1 text-sm" style={{ background: 'var(--bg-tertiary)', color: 'var(--text-secondary)', border: '1px solid var(--accent)' }}>
+                      <Badge key={project} className="px-2 sm:px-3 py-0.5 sm:py-1 text-xs sm:text-sm" style={{ background: 'var(--bg-tertiary)', color: 'var(--text-secondary)', border: '1px solid var(--accent)' }}>
                         {project}
                       </Badge>
                     ))}

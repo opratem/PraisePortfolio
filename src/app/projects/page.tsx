@@ -84,7 +84,7 @@ const projects: Project[] = [
     title: "The Prevailing Word Belivers Ministry Website",
     description: "A comprehensive full-stack church management website with member portal, admin dashboard, online donations, media management, and authentication system. Features 46+ pages, 38 API endpoints, and integrations with Cloudinary, YouTube, and Paystack.",
     longDescription: "A robust church management platform that handles everything from member management to online donations. Built with modern technologies and featuring extensive integrations for a complete digital church experience.",
-    link: "https://tpwbm.vercel.app",
+    link: "https://tpwbm.com.ng",
     githubLink: "https://tpwbm.vercel.app",
     type: "Full-stack",
     techStack: ["Next.js", "TypeScript", "React", "Tailwind CSS", "PostgreSQL"],
@@ -496,17 +496,17 @@ export default function ProjectsPage() {
 
       {/* Project Details Modal */}
       <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
-        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto" style={{ background: 'var(--bg-secondary)' }}>
+        <DialogContent className="sm:max-w-3xl" style={{ background: 'var(--bg-secondary)' }}>
           {selectedProject && (
             <>
               <DialogHeader>
-                <DialogTitle className="text-2xl font-bold pr-8 mb-2" style={{ color: 'var(--accent-light)' }}>
+                <DialogTitle className="text-xl sm:text-2xl font-bold mb-2" style={{ color: 'var(--accent-light)' }}>
                   {selectedProject.title}
                 </DialogTitle>
-                <div className="flex items-center gap-2 mb-3">
+                <div className="flex items-center gap-2 mb-2 sm:mb-3">
                   <Badge
                     variant="secondary"
-                    className="text-[10px] uppercase tracking-wide font-semibold px-2.5 py-1"
+                    className="text-[9px] sm:text-[10px] uppercase tracking-wide font-semibold px-2 sm:px-2.5 py-0.5 sm:py-1"
                     style={{
                       background: selectedProject.type === 'Full-stack' ? 'rgba(59, 130, 246, 0.15)' :
                                  selectedProject.type === 'Frontend' ? 'rgba(168, 85, 247, 0.15)' :
@@ -522,29 +522,29 @@ export default function ProjectsPage() {
                     {selectedProject.type}
                   </Badge>
                 </div>
-                <DialogDescription className="text-base pt-2" style={{ color: 'var(--text-secondary)' }}>
+                <DialogDescription className="text-sm sm:text-base pt-2 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                   {selectedProject.longDescription || selectedProject.description}
                 </DialogDescription>
               </DialogHeader>
 
-              <div className="space-y-6 mt-4">
+              <div className="space-y-5 sm:space-y-6 mt-3 sm:mt-4">
                 {/* Tech Stack */}
                 <div>
-                  <h4 className="font-semibold mb-3 text-left" style={{ color: 'var(--accent-light)' }}>
+                  <h4 className="font-semibold mb-2 sm:mb-3 text-left text-sm sm:text-base" style={{ color: 'var(--accent-light)' }}>
                     Technology Stack
                   </h4>
-                  <div className="flex gap-3 flex-wrap">
+                  <div className="flex gap-2 sm:gap-3 flex-wrap">
                     {selectedProject.icons.map((icon) => (
-                      <div key={icon.alt} className="flex items-center gap-2 px-3 py-2 rounded-lg" style={{ background: 'var(--bg-primary)' }}>
+                      <div key={icon.alt} className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg" style={{ background: 'var(--bg-primary)' }}>
                         <Image
                           src={icon.src}
                           alt={icon.alt}
                           title={icon.title}
                           width={24}
                           height={24}
-                          className="w-6 h-6"
+                          className="w-5 h-5 sm:w-6 sm:h-6"
                         />
-                        <span className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>
+                        <span className="text-xs sm:text-sm font-medium" style={{ color: 'var(--text-primary)' }}>
                           {icon.title}
                         </span>
                       </div>
@@ -555,14 +555,14 @@ export default function ProjectsPage() {
                 {/* Features */}
                 {selectedProject.features && selectedProject.features.length > 0 && (
                   <div>
-                    <h4 className="font-semibold mb-3 text-left" style={{ color: 'var(--accent-light)' }}>
+                    <h4 className="font-semibold mb-2 sm:mb-3 text-left text-sm sm:text-base" style={{ color: 'var(--accent-light)' }}>
                       Key Features
                     </h4>
-                    <ul className="space-y-2 text-left">
+                    <ul className="space-y-1.5 sm:space-y-2 text-left">
                       {selectedProject.features.map((feature, index) => (
                         <li key={index} className="flex items-start gap-2">
                           <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: 'var(--accent)' }} />
-                          <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{feature}</span>
+                          <span className="text-xs sm:text-sm" style={{ color: 'var(--text-secondary)' }}>{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -570,13 +570,13 @@ export default function ProjectsPage() {
                 )}
 
                 {/* Links */}
-                <div className="flex gap-3 pt-4 border-t" style={{ borderColor: 'var(--accent-glow)' }}>
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-4 border-t" style={{ borderColor: 'var(--accent-glow)' }}>
                   {selectedProject.link && (
                     <a
                       href={selectedProject.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition-all hover:scale-105"
+                      className="flex items-center justify-center gap-2 px-4 py-2.5 sm:py-2 rounded-lg font-semibold transition-all hover:scale-105 text-sm sm:text-base"
                       style={{
                         background: 'var(--accent)',
                         color: 'white',
@@ -591,7 +591,7 @@ export default function ProjectsPage() {
                       href={selectedProject.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg font-semibold border transition-all hover:scale-105"
+                      className="flex items-center justify-center gap-2 px-4 py-2.5 sm:py-2 rounded-lg font-semibold border transition-all hover:scale-105 text-sm sm:text-base"
                       style={{
                         borderColor: 'var(--accent)',
                         color: 'var(--accent)',

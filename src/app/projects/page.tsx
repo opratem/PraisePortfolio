@@ -23,6 +23,7 @@ interface Project {
   longDescription?: string;
   link: string;
   githubLink?: string;
+  backendLink?: string;
   type: ProjectType;
   techStack: string[];
   icons: Array<{ src: string; alt: string; title: string }>;
@@ -35,8 +36,9 @@ const projects: Project[] = [
     title: "WasteLess App - Climate Action Food Waste Reducer",
     description: "A comprehensive web application designed to combat climate change by reducing household food waste. Features smart inventory management, AI-powered expiration tracking, intelligent recipe suggestions using near-expiry ingredients, and an impact dashboard showing CO₂ emissions saved and financial savings. Helps users reduce waste by 30% and save ₦10,000 monthly.",
     longDescription: "WasteLess App is a comprehensive climate action solution that tackles the global food waste crisis through innovative technology. The application combines smart inventory management with AI-powered expiration tracking to help households reduce waste significantly.",
-    link: "https://github.com/Favoritetechgirl/WastelessApp-BE",
+    link: "https://wasteless-app-fe.vercel.app/",
     githubLink: "https://github.com/Favoritetechgirl/WastelessApp-BE",
+    backendLink: "https://wastelessapp-be-l0ld.onrender.com",
     type: "Full-stack",
     techStack: ["Spring Boot", "Java", "React", "PostgreSQL"],
     features: [
@@ -570,7 +572,7 @@ export default function ProjectsPage() {
                 )}
 
                 {/* Links */}
-                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-4 border-t" style={{ borderColor: 'var(--accent-glow)' }}>
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-4 border-t flex-wrap" style={{ borderColor: 'var(--accent-glow)' }}>
                   {selectedProject.link && (
                     <a
                       href={selectedProject.link}
@@ -584,6 +586,26 @@ export default function ProjectsPage() {
                     >
                       <Globe className="w-4 h-4" />
                       {selectedProject.link.includes('github') || selectedProject.link.includes('bitbucket') ? 'View Repository' : 'Visit Live Site'}
+                    </a>
+                  )}
+                  {selectedProject.backendLink && (
+                    <a
+                      href={selectedProject.backendLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 px-4 py-2.5 sm:py-2 rounded-lg font-semibold transition-all hover:scale-105 text-sm sm:text-base"
+                      style={{
+                        background: '#22c55e',
+                        color: 'white',
+                      }}
+                    >
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                        <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                        <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                        <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                      </svg>
+                      Backend API
                     </a>
                   )}
                   {selectedProject.githubLink && selectedProject.githubLink !== selectedProject.link && (
